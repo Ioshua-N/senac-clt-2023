@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../CSS/formulario.css" rel="stylesheet">
+
+        <title>Formulário Freelancer</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Formulario de Freelancer</legend>
+            <form id="formulario">
+                <div class="linha">
+                    <label class="coluna">Nome*</label>
+                    <input class="coluna" placeholder="Insira seu nome" required>
+                </div>
+                
+                <div class="linha">
+                    <label class="coluna">Sobrenome*</label>
+                    <input id="sobrenome" class="coluna" placeholder="Insira seu sobrenome" required>
+                </div>
+
+                <div class="linha">
+                    <label class="coluna">Telefone*</label>
+                    <input id="telefone" class="coluna" pattern="\(\d{2}\)\ \d{5}-\d{4}" placeholder="(99) 9 9999-9999" required>
+                </div>
+
+                <div class="linha">
+                    <label class="coluna">Email*</label>
+                    <input id="email" class="coluna" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+" placeholder="Insira seu email" required>
+                </div>
+
+                <div class="linha">
+                    <label class="coluna">Mensagem*</label>
+                    <textarea id="texto" class="coluna" required></textarea> 
+                </div>
+
+                <div class="linha">
+                    <label class="coluna">Lingua</label>
+                    <select class="coluna">
+                        <option>Inglês</option>
+                        <option>Espanhol</option>
+                        <option>Francês</option>
+                        <option>Português (pt-br)</option>                    
+                    </select>
+                </div>
+
+                <div class="linha">
+                    <label class="coluna">Protótipo (Requisitos)</label>
+                    <input class="coluna" type="file" accept=".pdf, .doc, .docx, image/jpeg, image/png">
+                </div>
+
+                <div class="linha">
+                    <label class="coluna">As linguagens que você prefere?</label>
+                    <select class="coluna" multiple>
+                        <option>Java</option>
+                        <option>C</option>
+                        <option>C++</option>
+                        <option>PHP</option>
+                        <option>Python</option>
+                    </select>
+                </div>
+
+                <div class="linha">
+                    <label class="coluna">Banco de Dados</label>  
+                    <form class="coluna">
+                        <label><input type="radio">MySQL</label>
+                        <label><input type="radio">PostgreSQL</label>
+                        <label><input type="radio">MongoDB</label>
+                        <label><input type="radio">N/A</label>
+                        <label><input type="radio">Outra</label>
+                    </form>
+                </div>
+
+                <div class="linha">
+                    <label class="coluna">Turno para Reuniões*</label>
+                    <form id="reuniao" class="coluna">
+                        <label><input type="checkbox" required></input>Manhã</label>
+                        <label><input type="checkbox" required></input>Tarde</label>
+                        <label><input type="checkbox" required></input>Noite</label>
+                    </form>
+                </div>
+
+                <div class="linha">
+                    <label class="coluna">Horário Sugerido</label>
+                    <input class="coluna" type="time">
+                </div>
+
+                <div class="linha">
+                    <label class="coluna">Data Prevista Entrega*</label>
+                    <input id="entrega" class="coluna" type="date" required>
+                </div>
+
+                <div class="linha">
+                    <input type="submit" value="Enviar">
+                    <input type="button" onclick="resetButton()" value="Apagar">
+                    <label>* Campos Obrigatórios</label>
+                </div>
+
+            </form>
+        </fieldset>
+        <script src="../JS/formulario.js"></script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+body
+{
+    text-align: center;
+}
+
+fieldset
+{
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+}
+
+.linha 
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+  
+.coluna 
+{
+    flex: 1;
+    margin-right: 5px;
+}
+
+coluna:last-child 
+{
+    margin-right: 0;
+}
